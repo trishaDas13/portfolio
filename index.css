@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(67, 66, 66);;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: rgb(67, 66, 66);
+}
+nav span {
+  color: rgb(229, 124, 35);
+}
+nav a,
+nav li {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  position: relative;
+}
+nav ul {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+nav ul li a:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: white;
+  transition: width 0.5s linear;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+/* particle.js  */
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+canvas {
+  display: block;
+}
+/* ---- particles.js container ---- */
+#particles-js {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(67, 66, 66);
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  justify-items: center;
+}
+.container {
+  width: 800px;
+  height: 450px;
+  position: absolute;
+  top: 4rem;
+  left: 16rem;
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 15px;
+  display: flex;
+}
+.profile {
+  width: 40%;
+  height: 100%;
+  background: rgb(244,236,230);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.profile img{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.profile h1{
+  font-size: 36px;
+  color: rgb(77, 60, 119);
+}
+.profile p{
+  font-weight: 600;
+  font-size: 18px;
+  color: black;
+  text-shadow: 2px 2px 10px #4d4d4da9;
+}
+.profile-links{
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  text-decoration: none;
+  justify-content: space-evenly;
+  font-size: 24px;
+  color: rgb(77, 60, 119);
+}
+.profile-content{
+  display: none;
+  width: 50%;
+  padding: 2rem;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.profile-content h1{
+  font-size: 36px;
+  color: rgb(229, 124, 35);
+}
+.profile-content p{
+  margin-top: 2rem;
+  line-height: 22px;
+  color: white;
+}
+.profile-buttons{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.profile-button{
+  min-width: 100px;
+  color: #fff;
+  padding: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  z-index: 0;
+  background: var(--primary-color);
+  overflow: hidden;
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: center;
+}
+.profile-button:hover {
+  color: rgb(0, 0, 0);
+}
+.profile-button:hover:after {
+  width: 100%;
+}
+.profile-button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(255, 255, 255);
+}
+.profile-button:active{
+  transform: scale(0.97);
+}
+.contact{
+  width: 100%;
+  margin-top: 2rem;
+}
