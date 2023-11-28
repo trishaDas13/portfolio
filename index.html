@@ -6,19 +6,33 @@
     <title>Portfolio | Trisha Das</title>
     <!-- link css file  -->
     <link rel="stylesheet" href="./index.css">
+    <!-- link animate.css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
+<header>
     <nav>
-        <a href="./index.html" style="font-size: 22px; font-weight: 700;">Trisha Das | <span class=" auto-type">Frontend Developer</span></a>
+        <a href="./index.html" style="font-size: 22px; font-weight: 700;" >Trisha Das | <span class="auto-type">Frontend Developer</span></a>
         <ul class="links">
             <li><a href="./aboutMe.html">About Me</a></li>
             <li><a href="./project.html">Project</a></li>
             <li><a href="./contactMe.html">Contact Me</a></li>
         </ul>
+        <i class="fa-solid fa-bars bar"></i>
     </nav>
+    <div class="responsive-navbar animate__animated animate__fadeInDown">
+        <ul class="responsive-links">
+            <a href="./aboutMe.html"><li>Experience</li></a>
+            <a href="./aboutMe.html"><li>Education</li></a>
+            <a href="./project.html"><li>Projects</li></a>
+            <a href="./aboutMe.html"><li>Skills</li></a>
+            <a href="./contactMe.html"><li>Contact Me</li></a>
+        </ul>
+    </div>
+</header>
     <main>
         <div id="particles-js">
-            <div class="container">
+            <div class="container animate__animated animate__fadeInDown">
                 <div class="profile">
                     <img src="./assets/my profile.jpg" alt="">
                     <h1>Trisha Das</h1>

@@ -46,7 +46,28 @@ nav ul li a:after {
 nav ul li a:hover:after {
   width: 100%;
 }
-/* particle.js  */
+nav .bar{
+  font-size: 20px;
+  color: #fff;
+  display: none;
+}
+.responsive-navbar{
+  width: 100%;
+  height: auto;
+  background-color: rgb(67, 66, 66);
+  position: absolute;
+  z-index: 6;
+  text-align: center;
+  font-size: 18px;
+  line-height: 70px;
+  font-weight: 600;
+  display: none;
+}
+.responsive-links a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
 body {
   margin: 0;
   font: normal 75% Arial, Helvetica, sans-serif;
@@ -65,18 +86,18 @@ canvas {
   background-size: cover;
   background-position: 50% 50%;
   display: flex;
-  justify-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .container {
   width: 800px;
   height: 450px;
   position: absolute;
-  top: 4rem;
-  left: 16rem;
   backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: 15px;
   display: flex;
+  flex-wrap: wrap;
 }
 .profile {
   width: 40%;
@@ -181,4 +202,42 @@ canvas {
 .contact{
   width: 100%;
   margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px){
+  nav .bar{
+    display: inline;
+  }
+  .links{
+    display: none;
+  }
+  .container{
+    width: 400px;
+    min-width: 300px;
+    height: auto;
+    top: 0;
+    flex-direction: column;
+    margin: 2rem 0;
+  }
+  .profile{
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 15px;
+  }
+  .profile-content{
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+} 
+
+@media screen and (max-width: 400px){
+  .container{
+    width: 100%;
+  }
+  nav{
+    padding: 1rem;
+  }
+  .auto-type{
+    font-size: 14px;
+  }
 }
