@@ -4,16 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About me | Trisha Das | portfolio</title>
+    <!-- link css file  -->
     <link rel="stylesheet" href="./aboutMe.css">
+    <!-- link AOS lib.  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <a href="./index.html" style="font-size: 22px; font-weight: 700;">Trisha Das | <span class=" auto-type">Frontend Developer</span></a>
-        <ul class="links">
-            <li><a href="./aboutMe.html">About Me</a></li>
-            <li><a href="./project.html">Project</a></li>
-            <li><a href="./contactMe.html">Contact Me</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <a href="./index.html" style="font-size: 22px; font-weight: 700;" >Trisha Das | <span class="auto-type">Frontend Developer</span></a>
+            <ul class="links">
+                <li><a href="./aboutMe.html">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="./project.html">Project</a></li>
+                <li><a href="./contactMe.html">Contact Me</a></li>
+            </ul>
+            <i class="fa-solid fa-bars bar"></i>
+        </nav>
+        <div class="responsive-navbar animate__animated animate__fadeInDown">
+            <ul class="responsive-links">
+                <a href="#experience"><li>Experience</li></a>
+                <a href="#education"><li>Education</li></a>
+                <a href="./project.html"><li>Projects</li></a>
+                <a href="./aboutMe.html"><li>Skills</li></a>
+                <a href="./contactMe.html"><li>Contact Me</li></a>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="experience" >
+            <h1 id="experience">Experience</h1>
+            <div class="jobCards">
+                <div class="jobcard card1" data-aos="fade-left">
+                    <div class="timeperiod"  data-aos="fade-right">
+                        <p>April 2023 - present</p>
+                    </div>
+                    <div class="description">
+                        <div class="role">
+                            <p><strong>Conneqt Business pvt. ltd.</strong></p>
+                            <p style="color:rgb(255,94,86)">Customer Care Service</p>
+                            <p>part-time (WFH)</p>
+                        </div>
+                        <div class="describe">
+                            <p>
+                                At Swiggy, I've learned my customer support skills, excelling in effective communication, issue resolution, and maintaining high customer satisfaction. I thrive in high-pressure environments and excel at multitasking and active listening.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="jobcard card2" data-aos="fade-left">
+                    <div class="timeperiod"  data-aos="fade-right">
+                        <p>February2021 – November 2023</p>
+                    </div>
+                    <div class="description">
+                        <div class="role">
+                            <p><strong>Archetive SolutionPvt. Ltd.</strong></p>
+                            <p style="color:rgb(255,94,86)">Senior Business Analyst</p>
+                            <p>Kolkata</p>
+                        </div>
+                        <div class="describe">
+                            <p>
+                                Working in the ITES Company and learning problem solving & team managing via work with our client. Submit the work order at a specific time and help my team to perform on time.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="jobcard card3" data-aos="fade-left">
+                    <div class="timeperiod"  data-aos="fade-right">
+                        <p>May 2020 - August 2020</p>
+                    </div>
+                    <div class="description">
+                        <div class="role">
+                            <p><strong>Outlook Publishing Pvt. Ltd.</strong></p>
+                            <p style="color:rgb(255,94,86)">Intern</p>
+                            <p>Delhi</p>
+                        </div>
+                        <div class="describe">
+                            <p>
+                                Worked in the Marketing sector, achieve targeted sales before the targeted time period, Learnt deferent aspects of company relations with customers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="experience education" >
+            <h1 id="Education">Education</h1>
+            <div class="jobCards">
+                <div class="jobcard card1" data-aos="fade-left">
+                    <div class="timeperiod"  data-aos="fade-right">
+                        <p>2023-2024</p>
+                    </div>
+                    <div class="description">
+                        <div class="describe eduDesc">
+                            <h3>Certification course on Full stack developer Geekster</h3>
+                            <p>
+                                Java || HTML || CSS || Tailwind CSS|| JavaScript|| React || Figma || nodeJS || MongoDB || ES6
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="jobcard card2" data-aos="fade-left">
+                    <div class="timeperiod"  data-aos="fade-right">
+                        <p>2018-2021</p>
+                    </div>
+                    <div class="description">
+                        <div class="describe eduDesc">
+                            <h3>Graduation - BBA(H)</h3>
+                            <p>
+                                Specialization in HR & Marketing <br> Boards - Adamas University <br> CGPA - 7.46
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="jobcard card3" data-aos="fade-left">
+                    <div class="timeperiod"  data-aos="fade-right">
+                        <p>2017-2018</p>
+                    </div>
+                    <div class="description">
+                        <div class="describe eduDesc">
+                            <h3>Higher Secondary</h3>
+                            <p>
+                                Boards – W.B.C.H.S.E <br> Percentage - 70.2%
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="float-down"></div>
+    </main>
+    <!-- link script file -->
+    <script src="./aboutMe.js"></script>
+    <!-- link AOS script  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- initialize AOS lib  -->
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
