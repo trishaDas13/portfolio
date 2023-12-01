@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(67, 66, 66);
+  cursor: none;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: rgb(67, 66, 66);
+}
+nav span {
+  color: rgb(229, 124, 35);
+}
+nav a,
+nav li {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  position: relative;
+}
+nav ul {
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+nav ul li a:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: white;
+  transition: width 0.5s linear;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+nav .bar {
+  font-size: 20px;
+  color: #fff;
+  display: none;
+}
+.responsive-navbar {
+  width: 100%;
+  height: auto;
+  background-color: rgb(67, 66, 66);
+  position: absolute;
+  z-index: 6;
+  text-align: center;
+  font-size: 18px;
+  line-height: 70px;
+  font-weight: 600;
+  display: none;
+}
+.responsive-links a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  nav .bar {
+    display: inline;
+  }
+  .links {
+    display: none;
+  }
+  nav {
+    padding: 1rem;
+  }
+  .auto-type {
+    font-size: 14px;
+  }
+  canvas{
+    display: none;
+  }
+}
+main{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 30px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.233);
+    padding: 1rem;
+}
+.container .skill img{
+    width: 50px;
+    width: 50px;
+}
+.skill{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.562);
+    border-radius: 15px;
+    gap: 20px;
+    font-weight: 600;
+    color: white;
+}
+.skill:hover{
+    color: black;
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    border: 1px solid white;
+}
+
+@media screen and (max-width: 751px) {
+    .container{
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: repeat(4, 150px);
+    }
+}
+@media screen and (max-width: 582px) {
+    .container{
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(5, 150px);
+    }
+}
+@media screen and (max-width: 375px) {
+    .container{
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(5, 100px);
+    }
+    .skill{
+        width: 100px;
+        height: 100px;
+        font-size: 14px;
+    }
+    .container .skill img{
+        width: 30px;
+        width: 30px;
+    }
+}
