@@ -16,17 +16,21 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5rem;
-  background-color: rgb(67, 66, 66);
+  background-color: rgb(249,88,81);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-bottom: 10px;
 }
 nav span {
-  color: rgb(229, 124, 35);
+  color: rgb(247, 245, 243);
 }
 nav a,
 nav li {
   text-decoration: none;
   list-style-type: none;
-  color: white;
+  color: black;
   position: relative;
+  font-weight: 500;
 }
 nav ul {
   width: 550px;
@@ -69,23 +73,7 @@ nav .bar {
   color: white;
   cursor: pointer;
 }
-@media screen and (max-width: 1024px) {
-  nav .bar {
-    display: inline;
-  }
-  .links {
-    display: none;
-  }
-  nav {
-    padding: 1rem;
-  }
-  .auto-type {
-    font-size: 14px;
-  }
-  canvas{
-    display: none;
-  }
-}
+
 main{
     display: flex;
     width: 100%;
@@ -125,12 +113,39 @@ main{
     transition: 0.5s ease-in-out;
     border: 1px solid white;
 }
+#wave{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -10;
+}
 
+@media screen and (max-width: 1024px) {
+  nav .bar {
+    display: inline;
+  }
+  .links {
+    display: none;
+  }
+  nav {
+    padding: 1rem;
+  }
+  .auto-type {
+    font-size: 14px;
+  }
+  canvas{
+    display: none;
+  }
+}
 @media screen and (max-width: 751px) {
     .container{
         grid-template-columns: repeat(3, 150px);
         grid-template-rows: repeat(4, 150px);
     }
+    #wave{
+      display: none;
+    }
+    
 }
 @media screen and (max-width: 582px) {
     .container{
