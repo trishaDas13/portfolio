@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(67, 66, 66);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: rgb(67, 66, 66);
+}
+nav span {
+  color: rgb(229, 124, 35);
+}
+nav a,
+nav li {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  position: relative;
+}
+nav ul {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+nav ul li a:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: white;
+  transition: width 0.5s linear;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+nav .bar {
+  font-size: 20px;
+  color: #fff;
+  display: none;
+}
+.responsive-navbar {
+  width: 100%;
+  height: auto;
+  background-color: rgb(67, 66, 66);
+  position: absolute;
+  z-index: 6;
+  text-align: center;
+  font-size: 18px;
+  line-height: 70px;
+  font-weight: 600;
+  display: none;
+}
+.responsive-links a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  nav .bar {
+    display: inline;
+  }
+  .links {
+    display: none;
+  }
+  nav {
+    padding: 1rem;
+  }
+  .auto-type {
+    font-size: 14px;
+  }
+}
+main{
+    border: 1px solid rgb(67, 66, 66);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+main img{
+    width: 500px;
+    height: 100%;
+    float: right;
+}
+main .text{
+    background-image: url(./assets/contactMe.jpg); 
+    background-repeat: repeat; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-size: 95px; 
+    text-align: center; 
+    text-transform: uppercase; 
+    line-height: 70px;
+    font-weight: 900; 
+    -webkit-font-smoothing: antialiased; 
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,rgba(0, 0, 0, 0.295));
+    margin-top: 3rem;
+}
+.col-18 {
+	display: inline-block;
+	position: relative;
+}
+.textbox-18 {
+	padding: 2px 0;
+	font-size: 14px;
+	color: #333;
+	height: 30px;
+	width: 275px;
+	letter-spacing: 1px;
+	border: 1px solid transparent;
+	border-bottom-color: #ccc;
+	transition: 0.4s;
+	outline: none;
+}
+.textbox-18 ~ .focus-border-18:before,
+.textbox-18 ~ .focus-border-18:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #3399FF;
+	transition: 0.3s;
+}
+.textbox-18 ~ .focus-border-18:after {
+	top: auto;
+	bottom: 0;
+	left: auto;
+	right: 0;
+}
+.textbox-18 ~ .focus-border-18 i:before,
+.textbox-18 ~ .focus-border-18 i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 0;
+	background-color: #3399FF;
+	transition: 0.4s;
+}
+.textbox-18 ~ .focus-border-18 i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+}
+.textbox-18:focus ~ .focus-border-18:before,
+.textbox-18:focus ~ .focus-border-18:after {
+	width: 100%;
+	transition: 0.3s;
+}
+.textbox-18:focus ~ .focus-border-18 i:before,
+.textbox-18:focus ~ .focus-border-18 i:after {
+	height: 100%;
+	transition: 0.4s;
+}
