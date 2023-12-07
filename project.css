@@ -82,6 +82,11 @@ nav .bar {
     font-size: 14px;
   }
 }
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .projectCard{
   width: 400px;
   height: 320px;
@@ -166,13 +171,50 @@ button:active {
   height: 100%;
 }
 .projectCotainer{
+  width: 100%;
   padding: 1rem 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(7, 1fr);
   gap: 30px;
-
 }
 .projectCard h2, .projectCard h5{
   margin-left: 1rem;
+  
+}
+.projectCard h2{
+  color: rgb(250, 121, 0);
+  text-shadow: 2px 2px 3px #141414;
+}
+
+.navigation{
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  nav .bar {
+    display: inline;
+  }
+  .links {
+    display: none;
+  }
+  nav {
+    padding: 1rem;
+  }
+  .auto-type {
+    font-size: 14px;
+  }
+  .projectCotainer{
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(8, 350px);
+  }
+}
+@media screen and (max-width: 700px) {
+  .projectCotainer{
+    grid-template-columns: repeat(1, 400px);
+    grid-template-rows: repeat(9, 350px);
+    padding-right: 1rem;
+  }
 }
