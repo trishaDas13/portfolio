@@ -41,7 +41,7 @@ nav ul li a:after {
   left: 0;
   bottom: 0;
   background: white;
-  transition: width 0.5s linear;
+  transition: width 0.1s linear;
 }
 nav ul li a:hover:after {
   width: 100%;

@@ -44,7 +44,7 @@ nav ul li a:after {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: white;
+  background: black;
   transition: width 0.1s linear;
 }
 nav ul li a:hover:after {
