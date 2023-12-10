@@ -217,5 +217,8 @@ h1{
   .auto-type {
     font-size: 14px;
   }
+  .navigation{
+    display: none;
+  }
 }
 
