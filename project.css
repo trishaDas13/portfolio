@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 body {
   width: 100%;
@@ -15,7 +16,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5rem;
-  background-color: rgb(67, 66, 66);
 }
 nav span {
   color: rgb(229, 124, 35);
@@ -41,7 +41,7 @@ nav ul li a:after {
   left: 0;
   bottom: 0;
   background: white;
-  transition: width 0.5s linear;
+  transition: width 0.1s linear;
 }
 nav ul li a:hover:after {
   width: 100%;
@@ -84,8 +84,10 @@ nav .bar {
 }
 main{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  color: white;
+  gap: 50px;
+  margin-top: 3rem;
 }
 .projectCard{
   width: 400px;
@@ -94,6 +96,7 @@ main{
   background-color: White;
   font-size: 14px;
   position: relative;
+  cursor: pointer;
 }
 .projectCard img{
   width: 100%;
@@ -161,28 +164,30 @@ button:active {
   transition: all .3s ease;
   width: 400px;
   height: 0;
-  bottom: 0;
+  bottom: 6rem;
   left: 0;
   border-radius: 15px;
   background-color: rgba(7, 7, 7, 0.801);
+
 }
 .projectCard:hover .overlay{
   opacity: 1;
+  bottom: 0;
   height: 100%;
 }
-.projectCotainer{
+.projectJS{
   width: 100%;
   padding: 1rem 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
-.projectCard h2, .projectCard h5{
+.projectCard h5{
   margin-left: 1rem;
-  
+  color: #141414;
 }
 .projectCard h2{
+  margin-left: 1rem;
   color: rgb(250, 121, 0);
   text-shadow: 2px 2px 3px #141414;
 }
@@ -191,6 +196,12 @@ button:active {
   position: fixed;
   right: 20px;
   bottom: 40px;
+  z-index: 10;
+}
+h1{
+  padding: 0 3rem;
+  position: relative;
+  line-height: 35px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -206,15 +217,5 @@ button:active {
   .auto-type {
     font-size: 14px;
   }
-  .projectCotainer{
-    grid-template-columns: repeat(2, 400px);
-    grid-template-rows: repeat(8, 350px);
-  }
 }
-@media screen and (max-width: 700px) {
-  .projectCotainer{
-    grid-template-columns: repeat(1, 400px);
-    grid-template-rows: repeat(9, 350px);
-    padding-right: 1rem;
-  }
-}
+
